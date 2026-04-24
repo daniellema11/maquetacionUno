@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { saveLocalStorage, getLocalStorage } from '../helpers/localstorage';
+import { showReservationSuccess } from '../helpers/alert';
 
 const BookingForm = () => {
   const [form, setForm] = useState({
@@ -14,8 +16,12 @@ const BookingForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // Aquí puedes manejar el envío (localStorage, consola, etc)
-    alert('¡Solicitud enviada!');
+    // Guardar datos usando helper
+    const reservas = getLocalStorage('reservas') || [];
+    reservas.push(form);
+    saveLocalStorage('reservas', reservas);
+    showReservationSuccess();
+    setForm({ name: '', email: '', experience: '', message: '' });
   };
 
   return (
