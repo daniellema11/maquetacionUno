@@ -4,7 +4,7 @@ const NavBar = () => {
 	return (
 		<header className="site-header">
 			<div className="container nav-wrap">
-				<div className="brand">ZENITH BONSAI</div>
+				<NavLink className="brand" to="/">ZENITH BONSAI</NavLink>
 				<nav className="nav-links">
 					<NavLink className="nav-link" to="/pages/philosophy">
 						Filosofía

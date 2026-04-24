@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar.jsx'
 import Footer from '../components/Footer.jsx'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
               Descubre la serenidad a través del cuidado y diseño de árboles Bonsái.
               Un espacio para reconectar con la naturaleza.
             </p>
-            <button className="btn">Reserva un taller</button>
+            <NavLink to="/pages/booking" className="btn">Reserva un taller</NavLink>
           </div>
           <div></div>
         </section>
