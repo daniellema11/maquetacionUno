@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import NavBar from '../components/NavBar.jsx'
 import Home from '../pages/Home.jsx'
+import Philosophy from '../pages/Philosophy.jsx'
 
 const RouterApp = () => {
 	return (
 		<BrowserRouter>
-			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/pages/philosophy" element={<Philosophy />} />
 			</Routes>
 		</BrowserRouter>
 	)
